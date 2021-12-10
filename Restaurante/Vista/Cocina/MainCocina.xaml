@@ -1,0 +1,20 @@
+﻿<Window x:Class="Restaurante.Vista.Cocina.MainCocina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurante.Vista.Cocina"
+        mc:Ignorable="d"
+        Title="Cocinero" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\RCace\Desktop\FONDO22.png"/>
+        </Grid.Background>
+        <Button Content="Recetas" Name="CocReceta" Click="CocReceta_click" Margin="0,0,692,387" Style="{DynamicResource BtnAdmStyle}" />
+        <DataGrid HorizontalAlignment="Left" Height="245" VerticalAlignment="Top" Width="792" Name="dgOrdenes" IsReadOnly="True" Foreground="#FF412E80" FontSize="16" FontWeight="Bold" Margin="0,32,0,0" Style="{DynamicResource dgStyle}"/>
+        <Button Content="Actualizar" HorizontalAlignment="Left" Margin="40,300,0,0" VerticalAlignment="Top" Width="75" Name="Actualizar" Click="Actualizar_Click" Style="{DynamicResource btnstyle2}" Foreground="#FF19170A"/>
+        <Button Content="Finalizar Pedido" HorizontalAlignment="Left" Name="Finalizar" Margin="455,300,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.2,0.75"  Click="Finalizar_Click" Style="{DynamicResource btnstyle2}" Foreground="#FF19170A"/>
+        <ComboBox HorizontalAlignment="Left" Margin="195,300,0,0" VerticalAlignment="Top" Width="205" Name="cbnropedido" Style="{DynamicResource CbStyle}"/>
+
+    </Grid>
+</Window>

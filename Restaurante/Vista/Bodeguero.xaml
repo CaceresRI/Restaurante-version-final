@@ -1,0 +1,49 @@
+﻿<Window x:Class="Restaurante.Vista.Bodeguero"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurante.Vista"
+        mc:Ignorable="d"
+        Title="Bodeguero" Height="477" Width="819">
+    <Grid Margin="0,0,-8,-1">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\RCace\Desktop\FONDO22.png"/>
+        </Grid.Background>
+        <DataGrid HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="809" Style="{DynamicResource dgStyle}" Name="dgInsumos" IsReadOnly="True"/>
+        <Button Content="Listar Insumos" HorizontalAlignment="Left" Margin="70,210,0,0" VerticalAlignment="Top" Width="100" Height="25" Name="Listar" Style="{DynamicResource btnstyle2}" Click="Listar_Click"/>
+        <Button Content="Agregar Insumo" HorizontalAlignment="Left" Margin="210,210,0,0" VerticalAlignment="Top" Width="100" Height="25" Name="Agregar" Style="{DynamicResource btnstyle2}" Click="Agregar_Click"/>
+        <Button Content="Solicitar Stock" HorizontalAlignment="Left" Margin="385,210,0,0" VerticalAlignment="Top" Width="90" Height="25" Name="controlar" Style="{DynamicResource btnstyle2}" Click="controlar_Click"/>
+        <Label Content="Insumo:" HorizontalAlignment="Left" Margin="55,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.447,2.115" Height="23" Width="55" Name="lblinsumo" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,276,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Name="txtInsumo" Visibility="Hidden"/>
+        <Label Content="precio unitario:" HorizontalAlignment="Left" Margin="20,315,0,0" VerticalAlignment="Top" Width="90" Name="lblPrecio" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Name="txtPrecio" Visibility="Hidden"/>
+        <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="35,364,0,0" VerticalAlignment="Top" Width="75" Name="lblDescripcion" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Name="txtDescripcion" Visibility="Hidden"/>
+        <Label Content="Stock:" HorizontalAlignment="Left" Margin="310,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.447,2.115" Height="23" Width="65" Name="lblStock" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,276,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Name="txtStock" Visibility="Hidden"/>
+        <Label Content="Tipo insumo:" HorizontalAlignment="Left" Margin="295,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.447,2.115" Height="23" Width="80" Name="lblTipo" Visibility="Hidden"/>
+        <ComboBox HorizontalAlignment="Left" Margin="385,320,0,0" VerticalAlignment="Top" Width="120" Name="cbTipo"  Style="{DynamicResource CbStyle}" Visibility="Hidden">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF5750F3" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Name="_1" Content="Carnes Rojas" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+            <ComboBoxItem Name="_2" Content="Carnes Blancas" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+            <ComboBoxItem Name="_3" Content="Legumbres" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+            <ComboBoxItem Name="_4" Content="No peresible" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+            <ComboBoxItem Name="_5" Content="Bebidas" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+            <ComboBoxItem Name="_6" Content="Alcoholes" HorizontalAlignment="Left" Width="142" Foreground="White" Background="#FF5750F3"/>
+        </ComboBox>
+        <Button Content="Confirmar" HorizontalAlignment="Left" Margin="310,365,0,0" VerticalAlignment="Top" Width="100" Height="25" x:Name="btnConfirmar" Visibility="Hidden" Style="{DynamicResource btnstyle2}" Click="btnConfirmar_Click"/>
+        <Label Content="Nombre Insumo" HorizontalAlignment="Left" Margin="485,269,0,0" VerticalAlignment="Top" Width="100" Name="lblnom2" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="txtNom2" Visibility="Hidden"/>
+        <Label Content="Cantidad deseada" HorizontalAlignment="Left" Margin="470,318,0,0" VerticalAlignment="Top" Width="115" Name="lblCant" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,319,0,0" TextWrapping="Wrap" Text="" Name="txtCant" VerticalAlignment="Top" Visibility="Hidden" Width="120"/>
+        <Button Content="Solicitar" HorizontalAlignment="Left" Margin="530,390,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource btnstyle2}" Visibility="Hidden" Name="btnsolicitar" Click="btnsolicitar_Click"/>
+
+
+    </Grid>
+</Window>
